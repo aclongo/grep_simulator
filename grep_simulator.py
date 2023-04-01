@@ -27,5 +27,8 @@ line_count = 0
 # Perform the regex on each line using a for loop
 for line in fhand:
     match = re.findall(regex, line)
-# Increment the line counter when matches are found (list not empty)
+    # Increment the line counter when matches are found (list not empty)
+    if match:
+        line_count += 1
+        
 # Print an f-string using file name, line counter and regex variables
