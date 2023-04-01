@@ -30,5 +30,6 @@ for line in fhand:
     # Increment the line counter when matches are found (list not empty)
     if match:
         line_count += 1
-        
+
 # Print an f-string using file name, line counter and regex variables
+print(f'{fname} had {line_count} lines that matched {regex}')
