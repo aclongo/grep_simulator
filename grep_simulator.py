@@ -6,8 +6,17 @@
     # mbox.txt had 1798 lines that matched ^Author
 
 # Ask user for a txt file name and save in fname variable
-# Open the txt file with a file handle
-# Use try and except to prevent bad file names
+while True:
+    try:    
+        fname = input('Enter the name of a txt file: ')
+    # Open the txt file with a file handle
+        hand = open(fname)
+        break
+    # Use try and except to prevent bad file names
+    except FileNotFoundError:
+        print('File not found.')
+        continue
+    
 # Ask user for a regular expression and save in regex variable
 # Initialize a line counter
 # Perform the regex on each line using a for loop
