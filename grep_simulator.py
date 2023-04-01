@@ -16,9 +16,11 @@ while True:
     except FileNotFoundError:
         print('File not found.')
         continue
-    
+
 # Ask user for a regular expression and save in regex variable
+regex = input('Enter a regular expression: ')
 # Initialize a line counter
+line_count = 0
 # Perform the regex on each line using a for loop
 # Increment the line counter when matches are found (list not empty)
 # Print an f-string using file name, line counter and regex variables
